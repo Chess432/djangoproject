@@ -1,0 +1,9 @@
+{% extends 'posts/layout.html' %}
+{% block content%}
+<h3 class="text-center p-3 mb-2 bg-success text-white">{{title}}</h3>
+<ul class="list-group">
+    {% for post in posts %}
+    <li class="list-group-item"><a href="/posts/details/{{post.id}}">{{post.title}}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
